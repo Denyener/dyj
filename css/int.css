@@ -1,0 +1,207 @@
+.left {
+    background-color: black;
+	display: flex;
+	justify-content: center;
+	align-items: center; /* 垂直居中 */
+	position: absolute; /* 绝对定位 */
+    width: 70%; /* 占据宽度的20% */
+    height: 730px;
+    left: 0; /* 固定在左侧 */
+	animation: TorightAndFadeIn 5s forwards;
+}
+.logo1{
+	position: absolute;
+	width: 60px;
+	height: 400px;
+	top: 180px;
+	left: 1000px;
+	opacity: 0;
+	animation: TorightAndFadeIn 5s infinite 0.5s;/* 动画 */
+}
+.logo2{
+	position: absolute;
+	width: 60px;
+	height: 500px;
+	top: 80px;
+	left: 1140px;
+	opacity: 0;
+	animation: TotopAndFadeIn 5s infinite 0.5s;/* 动画 */
+	
+}
+.logo3{
+	position: absolute;
+	width: 220px;
+	height: 60px;
+	top: 500px;
+	left: 440px;
+	opacity: 0;
+	animation: TorightAndFadeIn 5s infinite 2s;/* 动画 */
+}
+.w6{
+	position: absolute;
+	top: 40px;
+	left: 1080px;
+	background-color: #ffffff;
+	width: 3px;
+	height: 620px;
+	opacity: 0;
+	animation: TotopAndFadeIn 5s forwards 0.5s;/* 动画 */
+	
+}
+.w7{
+	position: absolute;
+	top: 40px;
+	left: 1110px;
+	background-color: #000000;
+	width: 3px;
+	height: 620px;
+	opacity: 0;
+	animation: TorightAndFadeIn 5s forwards 0.5s;/* 动画 */
+}
+.box{
+	display: flex;
+	justify-content: center;
+	width: 500px;
+	height: 600px;
+	background-color: whitesmoke;
+	/* left: 500px; */
+	
+}
+.picture{
+	display: flex;
+	position: absolute; /* 绝对定位 */
+	width: 90px;
+	height: 120px;
+	top: 100px;
+	left: 500px;
+	animation: TotopAndFadeIn 5s forwards;
+	
+}
+.mailbox{
+	position: absolute; /* 绝对定位 */
+	top: 250px;
+	font-weight: bold;
+	opacity: 0; /* 初始透明 */
+	animation: TotopAndFadeIn 5s forwards;
+	animation-delay: 1s; /* 延迟 2 秒开始动画 */
+}
+.textbox{
+	background-color: #ffaaff;
+	position: absolute; /* 绝对定位 */
+	top: 300px;
+	width: 400px;
+	height: 340px;
+	animation: TotopAndFadeIn 5s forwards;
+	
+}
+#content {
+	display: flex;
+	position: absolute; /* 绝对定位 */
+	align-items: center; /* 垂直居中 */
+	top: 300px;
+	width: 400px;
+	height: 200px;
+	margin-bottom: 20px;
+	color: #000000; 
+	/* background-color: white; */
+	flex-direction: column;
+	opacity: 0; /* 初始透明 */
+	gap: 10px; /* 增加图片间距 */
+	animation: TotopAndFadeIn 5s forwards;
+	animation-delay: 1s; /* 延迟 2 秒开始动画 */
+}
+img {
+	
+	width: 380px; /* 确保图片不超出容器宽度 */
+	height: auto;
+	border-radius: 5px; /* 圆角效果 */
+}
+#pageInfo { 
+	display: flex;
+	position: absolute;
+	top:600px;
+	font-size: 10px;
+	justify-content: center;
+	opacity: 0; /* 初始透明 */
+	animation: TotopAndFadeIn 5s forwards;
+	animation-delay: 3s; /* 延迟 2 秒开始动画 */
+	}
+.img_btn {
+	margin: 5px;
+	position: relative; 
+	height: 24px;
+	/* border-radius: 45%; */
+	top:500px; 
+	opacity: 0; /* 初始透明 */
+	animation: TotopAndFadeIn 5s forwards;
+	animation-delay: 3s; /* 延迟 2 秒开始动画 */
+	}
+.right {
+    background-color: whitesmoke;
+	padding-right: 40px; /* 添加内边距 */
+	position: absolute;
+    width: 100%; /* 占据宽度的20% */
+    height: 730px; 
+    right: 0; /* 固定在右侧 */
+}
+.btn{
+	/* position: absolute; */
+	display: flex;
+	margin-top: 150px;
+	margin-bottom: 50px;
+	justify-content: flex-end; /* 使内容靠右对齐 */
+	opacity: 0; /* 初始透明 */
+	animation: TotopAndFadeIn 5s forwards;
+	animation-delay: 4s; /* 延迟 2 秒开始动画 */
+}
+.right-btn{
+	width: 100px;
+	height: 24px;
+	padding: 10px 20px;
+	display: flex; /* 使用 flexbox 使内容居中 */
+	justify-content: center; /* 水平居中 */
+	align-items: center; /* 垂直居中 */
+	background-color: #161616; /* 按钮背景颜色 */
+	color: white; /* 字体颜色 */
+	text-decoration: none; /* 去掉链接下划线 */
+	border-radius: 5px; /* 圆角效果 */
+	transition: background-color 0.3s; /* 背景颜色渐变效果 */
+	
+}
+.right-btn:hover {
+            background-color: #aaffff; /* 悬停时改变背景颜色 */
+			color: #0055ff;
+}
+/* 向右渐变出现 */
+@keyframes TorightAndFadeIn {
+    0% {
+        transform: translate(-100px, 0); /* 动画的起始位置 */
+        opacity: 0;
+    }
+    100% {
+        transform: translate(0, 0); /* 结束位置 */
+        opacity: 1;
+    }
+}
+/* 向上渐变出现 */
+@keyframes TotopAndFadeIn {
+    0% {
+        transform: translate(0, 100px); /* 动画的起始位置 */
+        opacity: 0;
+    }
+    100% {
+        transform: translate(0, 0); /* 结束位置 */
+        opacity: 1;
+    }
+}
+/* 向左渐变出现 */
+@keyframes ToleftAndFadeIn {
+    0% {
+        transform: translate(100px, 0); /* 动画的起始位置 */
+        opacity: 0;
+    }
+    100% {
+        transform: translate(0, 0); /* 结束位置 */
+        opacity: 1;
+    }
+}

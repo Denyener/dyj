@@ -1,0 +1,91 @@
+.logo{
+	padding: 50px;
+	width: 200px;
+	height: 80px;
+	opacity: 0;
+	animation: TobottomAndFadeIn 2s forwards, jump 6s infinite 2s;
+}
+.return-btn{
+	top: 590px;
+	left: 120px;
+	width: 110px;
+	height: 10px;
+	position: relative;
+	padding: 10px 20px;
+	display: table; /* 使用 flexbox 使内容居中 */
+	justify-content: center; /* 水平居中 */
+	align-items: center; /* 垂直居中 */
+	color: white; /* 字体颜色 */
+	text-decoration: none; /* 去掉链接下划线 */
+	border-radius: 5px; /* 圆角效果 */
+	
+}
+.left{
+	position: absolute;
+	top: 10px;
+	left: 0;
+	width: 320px;
+	height: 720px;
+	background-color: #000000;
+}.video-container {
+    display: flex;
+    justify-content: center;
+	position: absolute;
+	top: 60px;
+	left: 420px;
+    margin: 10px;
+}
+video {
+    width: 1000px;
+    height: 600px;
+}
+
+.button-container {
+    text-align: right;         
+	margin-top: 20px;
+	background-color: black;
+	
+}
+.btn{
+	position: absolute;
+	display: flex;
+	top: 220px;
+	left: 80px;
+	
+	justify-content: flex-start; /* 使内容靠右对齐 */
+	display: grid;
+	grid-template-columns: repeat(1, 1fr); /* 一列 */
+	gap: 60px; /* 按钮之间的间隔 */
+	
+}
+button {
+    margin: 0 5px;
+	width: 160px;
+	height: 40px;
+	border-radius: 5px;
+	display: flex; /* 使用 flexbox 使内容居中 */
+	justify-content: center; /* 水平居中 */
+	align-items: center; /* 垂直居中 */
+}
+/* 向下渐变出现 */
+@keyframes TobottomAndFadeIn {
+    0% {
+        transform: translate(0, -100px); /* 动画的起始位置 */
+        opacity: 0;
+    }
+    100% {
+        transform: translate(0, 0); /* 结束位置 */
+        opacity: 1;
+    }
+}
+@keyframes jump {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0); /* 初始位置 */
+    }
+    40% {
+        transform: translateY(-20px); /* 向上跳 */
+    }
+    60% {
+        transform: translateY(-10px); /* 中间下落 */
+    }
+}
